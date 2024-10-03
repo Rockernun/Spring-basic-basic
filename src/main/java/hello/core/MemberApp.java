@@ -8,7 +8,9 @@ import hello.core.member.MemberServiceImpl;
 // 이런 식으로 테스트하는 것은 좋은 방법이 아니다
 public class MemberApp {
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+//        MemberService memberService = new MemberServiceImpl();
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 
