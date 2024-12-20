@@ -9,6 +9,14 @@
   <div markdown="1">
     <br />
     <p>
+      <strong>비즈니스 요구사항과 설계</strong>
+      <ul>
+        <li>먼저, 회원은 가입하고 조회할 수 있고, 일반/VIP 2개의 등급이 존재한다. 회원 데이터는 자체 DB를 구축할 수 있고, 외부 시스템과 연동할 수 있다(미확정).</li>
+        <li>회원은 상품을 주문할 수 있고, 회원 등급에 따라 할인 정책을 적용받는다. 할인 정책은 모든 VIP 회원들의 경우 1000원을 할인해주는 고정 금액 할인을 적용한다.</li>
+      </ul>
+      <i>역할과 구현으로 구분하자!</i>
+    </p>
+    <p>
       회원 등급(Grade), 회원 엔티티(Member), 회원 저장소 인터페이스(MemberRepository), 메모리 회원 저장소 구현체(MemoryMemberRepository), 회원 서비스 인터페이스(MemberService), 회원 서비스 구현체(MemberServiceImpl), 회원 가입 main(MemberApp),
     회원 가입 테스트(MemberServiceTest) 도메인을 설계했다. 현재 회원 도메인 설계에서 인터페이스와 구현체에 모두 의존하는 문제점이 있지만, 일단 계속해서 주문과 할인 도메인을 개발했다.
     </p>
