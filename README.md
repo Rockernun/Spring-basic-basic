@@ -10,7 +10,7 @@
     <br />
     <p>
       회원 등급(Grade), 회원 엔티티(Member), 회원 저장소 인터페이스(MemberRepository), 메모리 회원 저장소 구현체(MemoryMemberRepository), 회원 서비스 인터페이스(MemberService), 회원 서비스 구현체(MemberServiceImpl), 회원 가입 main(MemberApp),
-    회원 가입 테스트(MemberServiceTest) 도메인 설계을 설계했다. 현재 회원 도메인 설계에서 인터페이스와 구현체에 모두 의존하는 문제점이 있지만, 일단 계속해서 주문과 할인 도메인을 개발했다.
+    회원 가입 테스트(MemberServiceTest) 도메인을 설계했다. 현재 회원 도메인 설계에서 인터페이스와 구현체에 모두 의존하는 문제점이 있지만, 일단 계속해서 주문과 할인 도메인을 개발했다.
     </p>
     <p>
       할인 정책 인터페이스(DiscountPolicy), 정액 할인 정책 구현체(FixDiscountPolicy), 
