@@ -35,5 +35,10 @@ public class SingletonTest {
 
         System.out.println("singletonService1 = " + singletonService1);
         System.out.println("singletonService2 = " + singletonService2);
+
+        // singletonService1 == singletonService2
+        Assertions.assertThat(singletonService1).isSameAs(singletonService2);
+
+        singletonService1.logic();
     }
 }
