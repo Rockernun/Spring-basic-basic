@@ -20,16 +20,15 @@ class StatefulServiceTest {
         System.out.println("statefulService2 = " + statefulService2);
 
         // Thread A : 사용자 A가 10000원 주문
-        statefulService1.order("userA", 10000);
+        int userAPrice = statefulService1.order("userA", 10000);
 
         // Thread B : 사용자 A가 20000원 주문
-        statefulService2.order("userB", 20000);
+        int userBPrice = statefulService2.order("userB", 20000);
 
-        // Thread A : 사용자 A가 주문 금액 조회
-        int price = statefulService1.getPrice();
-        System.out.println("price = " + price);
+        System.out.println("price = " + userAPrice);
+        System.out.println("price = " + userBPrice);
 
-        Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
+        // Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
     }
 
     static class TestConfig {
